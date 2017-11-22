@@ -1,11 +1,13 @@
 package com.learn.hateoas.springhateos.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity(name="IMAGE")
 public class Image {
 
 	@Id
@@ -13,9 +15,9 @@ public class Image {
 	private Long id;
 	
 	private String type;
-	
+
     @ManyToOne
-    @JoinColumn(name="product_id", nullable=false)
+    @JoinColumn(name="product_id", referencedColumnName="id")
 	private Product product;
 
 	public Long getId() {

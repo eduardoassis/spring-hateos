@@ -29,7 +29,7 @@ public class Product {
 	@OneToMany(mappedBy="parent", cascade={CascadeType.ALL})
 	private List<Product> children;
 
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="product")
+	@OneToMany(mappedBy="product")
 	private List<Image> images;
 
 	public Long getId() {
