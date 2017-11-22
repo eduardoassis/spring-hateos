@@ -6,4 +6,6 @@ import com.learn.hateoas.springhateos.domain.Image;
 
 public interface ImageRepository extends CrudRepository<Image, Long> {
 
+	Image findByType(String type);
+	
 }
