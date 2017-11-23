@@ -43,4 +43,9 @@ public class Image {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+	
+	public void updateData(Image image) {
+		this.type = image.getType();
+		this.product = image.getProduct();
+	}
 }
